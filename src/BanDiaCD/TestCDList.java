@@ -1,8 +1,10 @@
 package BanDiaCD;
 import java.util.Scanner;
 
-public class TestCDList {
-    public static void main(String[] args) {
+public class TestCDList 
+{
+    public static void main(String[] args) 
+    {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Nhập số lượng CD tối đa: ");
@@ -12,7 +14,8 @@ public class TestCDList {
 
         int choice;
 
-        do {
+        do 
+        {
             System.out.println("\n========== MENU ==========");
             System.out.println("1. Thêm CD");
             System.out.println("2. Hiển thị danh sách CD");
@@ -25,9 +28,11 @@ public class TestCDList {
 
             choice = sc.nextInt();
 
-            switch (choice) {
+            switch (choice) 
+            {
                 case 1:
-                    try {
+                    try 
+                    {
                         System.out.print("Nhập mã CD: ");
                         int maCD = sc.nextInt();
                         sc.nextLine();
@@ -37,21 +42,24 @@ public class TestCDList {
 
                         System.out.print("Nhập số bài hát: ");
                         int soBaiHat = Integer.parseInt(sc.nextLine().trim());
-
+                        
                         System.out.print("Nhập giá thành: ");
                         double giaThanh = Double.parseDouble(sc.nextLine().trim());
 
                         CD cd = new CD(maCD, tuaCD, soBaiHat, giaThanh);
 
-                        if (list.themCD(cd)) {
+                        if (list.themCD(cd)) 
+                        {
                             System.out.println("Thêm CD thành công!");
-                        } else {
+                        } else 
+                        {
                             System.out.println(
                                 "Thêm thất bại: mã CD bị trùng hoặc danh sách đã đầy."
                             );
                         }
 
-                    } catch (IllegalArgumentException e) {
+                    } catch (IllegalArgumentException e) 
+                    {
                         System.out.println("Lỗi: " + e.getMessage());
                     }
                     break;
