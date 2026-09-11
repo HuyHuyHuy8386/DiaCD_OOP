@@ -1,0 +1,2 @@
+module DiaCD_OOP {
+}
